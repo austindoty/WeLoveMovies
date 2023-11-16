@@ -1,3 +1,5 @@
+const db = require("../db/connection");
+
 // Function to list movies that are currently showing
 function listShowing() {
   return db("movies as m")
