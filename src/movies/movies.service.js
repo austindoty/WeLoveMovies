@@ -1,5 +1,9 @@
 const db = require("../db/connection");
 
+// function to list all movies
+function list() {
+  return db("movies");
+}
 // Function to list movies that are currently showing
 function listShowing() {
   return db("movies as m")
@@ -35,6 +39,7 @@ function listTheaters(movieId) {
 
 // Exporting the functions to be used in the controller or other modules
 module.exports = {
+  list,
   listShowing,
   read,
   getCritics,
